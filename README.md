@@ -83,3 +83,6 @@ ls -d[[:lower:]]
 | wget       | Downloads a file from the Internet without leaving the terminal.                                                |
 | traceroute | Prints the route that a packet takes to reach the host.                                                         |
 | netstat -i | Displays network devices                                                                                        |                                             |
+
+## How does the shell works
+![how does the shell works](https://github.com/brendamrdz/week1-course1-terminal/blob/main/images/Picture1.png?raw=true)
