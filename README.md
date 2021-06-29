@@ -73,3 +73,13 @@ ls -d [[:upper:]]
 ```bash
 ls -d[[:lower:]] 
 ```
+## Network Utilities
+
+| Command    | Description                                                                                                     |
+|------------|-----------------------------------------------------------------------------------------------------------------|
+| ifconfig   | Displays network information                                                                                     |
+| ping       | It’s a way to see whether a computer can communicate with the Internet or a specific IP address                 |
+| curl       | Downloads a file from the Internet without leaving the terminal. Type curl -O followed by the path to the file. |
+| wget       | Downloads a file from the Internet without leaving the terminal.                                                |
+| traceroute | Prints the route that a packet takes to reach the host.                                                         |
+| netstat -i | Displays network devices                                                                                        |                                             |
