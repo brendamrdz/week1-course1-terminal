@@ -86,3 +86,42 @@ ls -d[[:lower:]]
 
 ## How does the shell works
 ![how does the shell works](https://github.com/brendamrdz/week1-course1-terminal/blob/main/images/Picture1.png?raw=true)
+
+## How to manage permissions
+The permissions control the actions that can be performed on the file or directory. They either permit, or prevent, a file from being read, modified or, if it is a script or program, executed. 
+* chmod command modifies Linux file permissions
+
+Types of mode
+- Owner
+- Group
+- World
+
+| SYMBOLIC MODE | TYPES OF MODES     |
+|---------------|-----------|
+| u             | user      |
+| e             | group     |
+| o             | world     |
+| a             | all modes |
+
+|     TYPES OF MODES    |                |                                                     |
+|-----------------------|----------------|-----------------------------------------------------|
+|     OCTAL             |     BINARIO    |     PERMISSIONS rwx  (read,   write,    execute)    |
+|     0                 |     000        |     ---                                             |
+|     1                 |     001        |     --x                                             |
+|     2                 |     010        |     -w-                                             |
+|     3                 |     011        |     -wx                                             |
+|     4                 |     100        |     r--                                             |
+|     5                 |     101        |     r-x                                             |
+|     6                 |     110        |     rw-                                             |
+|     7                 |     111        |     rwx                                             |
+
+### Change permissions example
+Remove read permission from a user
+```bash
+chmod u-r nameFile.txt
+```
+Add read permission from a user
+```bash
+chmod u+r nameFile.txt
+```
+
