@@ -25,7 +25,7 @@ A program that can be execute from the terminal. It could recibe parameters and 
 | Commands | Description                                                                                                                                                 | Syntax                                  |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | ls       | List files in the current working directory                                                                                                                 | ls                                      |
-| cd       | To navigate through the Linux files and directories                                                                                                         | cd /home/username/Downloads             |
+| cd       | To navigate through the Linux files and directories                                                                                                         | cd /[path-directory]             |
 | clear    | Clean the terminal from past commands.                                                                                                                      | clear                                   |
 | pwd      | Print working directory path.                                                                                                                               | pwd                                     |
 | tree     | Displays the directory structure in a drive graphically.  Add -l flag to specify the levels of the tree.                                                    | tree -l2                                |
@@ -37,12 +37,11 @@ A program that can be execute from the terminal. It could recibe parameters and 
 | head     | Displays the first lines of any text file. By default, it will show the first ten lines. To modify the number of lines add -n flag and the number of lines. | head -n 5 filename.ext.                 |
 | tail     | Displays the last lines of any text file. By default, it will show the first ten lines. To modify the number of lines add -n flag and the number of lines.  | tail -n 20 filename.ext                 |
 | Less     | Displays all the content of a file                                                                                                                          | less filename.ext                       |
-| type     |                                                                                                                                                             | type command                            |
-| alias    |                                                                                                                                                             |                                         |
-| --help   |                                                                                                                                                             | commandname --help                      |
+| type     |    It will show you how a given command would be interpreted if typed on the command line.                                                                                                                                                         | type command                            |
+| alias    | the alias command is used to convert any Linux command into own command or own keyword.                                                                                                                                                            |     alias www='ll /var/www/'                                    |
+| --help   | help displays brief summaries of shell builtin commands.                                                                                                                                                            | echo --help                      |
 | man      | Displays the user manual for a command                                                                                                                      | man commandname                         |
-| info     |                                                                                                                                                             |                                         |
-| whatis   | a                                                                                                                                                           |                                         |
+
 
 
 ## Wildcards
@@ -86,7 +85,28 @@ ls -d[[:lower:]]
 
 ## How does the shell works
 ![how does the shell works](https://github.com/brendamrdz/week1-course1-terminal/blob/main/images/Picture1.png?raw=true)
-
+### Pipe operator
+The pipe character redirects the standard output from one command to the standard input of another command. 
+```bash
+ls -lh | less
+```
+### Redirecting Standard Output
+The greater-than (>) metacharacter directs the standard output to a file instead of printing the output to the screen.
+```bash
+ls Pictures > myPictures.txt
+```
+### Redirecting Standard Error
+A command using the file descriptor number (2) and the greater-than (>) sign redirects any standard error messages to the /dev/null file.
+```bash
+less file.tst 2> /dev/null
+```
+## Control Operators
+| Control Operator              | Usage                                                                                                                                    | Syntax                     |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
+| ;semicolon                    | Semicolon is used for separation of two or more commands on a single line of command prompt                                              | echo Hello ; echo World    |
+| & ampersand                   | The execution of command take place in background of command prompt. It show full result after completion of full process in background. | echo Hello World &         |
+| && double ampersand           | In this case this operator check if the first condition is true then only second will execute.                                           | echo Hello && echo World   |
+| || double vertical bar      | Double vertical bar is used as OR logical operators that check two commands. In this case the operator check both conditions.            | echo Hello || echo World |
 ## How to manage permissions
 The permissions control the actions that can be performed on the file or directory. They either permit, or prevent, a file from being read, modified or, if it is a script or program, executed. 
 * chmod command modifies Linux file permissions
