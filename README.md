@@ -24,7 +24,7 @@ A program that can be execute from the terminal. It could recibe parameters and 
 
 | Commands | Description                                                                                                                                                 | Syntax                                  |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| ls       | List files in the current working directory                                                                                                                 | ls                                      |
+| ls       | List of files in the current working directory                                                                                                                 | ls                                      |
 | cd       | To navigate through the Linux files and directories                                                                                                         | cd /[path-directory]             |
 | clear    | Clean the terminal from past commands.                                                                                                                      | clear                                   |
 | pwd      | Print working directory path.                                                                                                                               | pwd                                     |
@@ -32,15 +32,15 @@ A program that can be execute from the terminal. It could recibe parameters and 
 | mkdir    | Creates a new directory.                                                                                                                                    | mkdir dirname1                          |
 | touch    | Creates a new file.                                                                                                                                         | touch filename.ext                      |
 | cp       | Copy files from the current directory to a different directory.                                                                                             | cp filename.ext /home/username/new-path |
-| mv       | Move files from the current directory to a different directory also It works to rename files.                                                               | mv filename.ext /home/username/new-path |
-| rm       | deletes files.                                                                                                                                              | rm filename.ext                         |
-| head     | Displays the first lines of any text file. By default, it will show the first ten lines. To modify the number of lines add -n flag and the number of lines. | head -n 5 filename.ext.                 |
-| tail     | Displays the last lines of any text file. By default, it will show the first ten lines. To modify the number of lines add -n flag and the number of lines.  | tail -n 20 filename.ext                 |
-| Less     | Displays all the content of a file                                                                                                                          | less filename.ext                       |
+| mv       | Move files from the current directory to a different directory also used to rename files.                                                               | mv filename.ext /home/username/new-path. |
+| rm       | Deletes files.                                                                                                                                              | rm filename.ext                         |
+| head     | Displays the first lines of any text file. By default, it will show the first ten lines. To modify the number of lines add -n.| head -n 5 filename.ext.                 |
+| tail     | Displays the last lines of any text file. By default, it will show the first ten lines. To modify the number of lines add -n.| tail -n 20 filename.ext.                 |
+| Less     | Displays all the content of a file.                                                                                                                          | less filename.ext                       |
 | type     |    It will show you how a given command would be interpreted if typed on the command line.                                                                                                                                                         | type command                            |
-| alias    | the alias command is used to convert any Linux command into own command or own keyword.                                                                                                                                                            |     alias www='ll /var/www/'                                    |
-| --help   | help displays brief summaries of shell builtin commands.                                                                                                                                                            | echo --help                      |
-| man      | Displays the user manual for a command                                                                                                                      | man commandname                         |
+| alias    | The alias command is used to convert any Linux command into it's own command and keyword.                                                                                                                                                            |     alias www='ll /var/www/'                                    |
+| --help   | Helps display brief summaries of shell builtin commands.                                                                                                                                                            | echo --help                      |
+| man      | Displays the user manual for a command .                                                                                                                     | man commandname                         |
 
 
 
@@ -55,17 +55,17 @@ Commands can use wildcards to perform actions on more than one file at a time.
 
 ### Examples
 
-Displays all those files that have the word data in the file name
+Displays all those files that have the word data in the file name.
 
 ```bash
 ls data*
 ```
-Displays all those files that have the word data and ends with a characters in the file name
+Displays all those files that have the word data and end with a characters in the file name.
 
 ```bash
 ls datos?
 ```
-Displays all those directorys that start with lowercase and uppercase
+Displays all those directories that start with lowercase and uppercase
 ```bash
 ls -d [[:upper:]] 
 ```
@@ -76,12 +76,12 @@ ls -d[[:lower:]]
 
 | Command    | Description                                                                                                     |
 |------------|-----------------------------------------------------------------------------------------------------------------|
-| ifconfig   | Displays network information                                                                                     |
-| ping       | It’s a way to see whether a computer can communicate with the Internet or a specific IP address                 |
+| ifconfig   | Displays network information.                                                                                     |
+| ping       | It’s a way to see whether a computer can communicate with the Internet or a specific IP address.                |
 | curl       | Downloads a file from the Internet without leaving the terminal. Type curl -O followed by the path to the file. |
 | wget       | Downloads a file from the Internet without leaving the terminal.                                                |
 | traceroute | Prints the route that a packet takes to reach the host.                                                         |
-| netstat -i | Displays network devices                                                                                        |                                             |
+| netstat -i | Displays network devices.                                                                                        |                                             |
 
 ## How does the shell works
 ![how does the shell works](https://github.com/brendamrdz/week1-course1-terminal/blob/main/images/Picture1.png?raw=true)
@@ -103,7 +103,7 @@ less file.tst 2> /dev/null
 ## Control Operators
 | Control Operator              | Usage                                                                                                                                    | Syntax                     |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| ;semicolon                    | Semicolon is used for separation of two or more commands on a single line of command prompt                                              | echo Hello ; echo World    |
+| ;semicolon                    | Semicolon is used for separation of two or more commands on a single line of command prompt.                                              | echo Hello ; echo World    |
 | & ampersand                   | The execution of command take place in background of command prompt. It show full result after completion of full process in background. | echo Hello World &         |
 | && double ampersand           | In this case this operator check if the first condition is true then only second will execute.                                           | echo Hello && echo World   |
 | || double vertical bar      | Double vertical bar is used as OR logical operators that check two commands. In this case the operator check both conditions.            | echo Hello || echo World |
