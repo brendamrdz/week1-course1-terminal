@@ -104,8 +104,8 @@ less file.tst 2> /dev/null
 | Control Operator              | Usage                                                                                                                                    | Syntax                     |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
 | ;semicolon                    | Semicolon is used for separation of two or more commands on a single line of command prompt.                                              | echo Hello ; echo World    |
-| & ampersand                   | The execution of command take place in background of command prompt. It show full result after completion of full process in background. | echo Hello World &         |
-| && double ampersand           | In this case this operator check if the first condition is true then only second will execute.                                           | echo Hello && echo World   |
+| & ampersand                   | The execution of command takes place in the background of the command prompt. It shows full result after completion of full process in the background. | echo Hello World &         |
+| && double ampersand           | In this case this operator checks if the first condition is true then only the second will execute.                                           | echo Hello && echo World   |
 | || double vertical bar      | Double vertical bar is used as OR logical operators that check two commands. In this case the operator check both conditions.            | echo Hello || echo World |
 ## How to manage permissions
 The permissions control the actions that can be performed on the file or directory. They either permit, or prevent, a file from being read, modified or, if it is a script or program, executed. 
@@ -136,11 +136,11 @@ Types of mode
 |     7                 |     111        |     rwx                                             |
 
 ### Change permissions example
-Remove read permission from a user
+Remove permission from a user to read
 ```bash
 chmod u-r nameFile.txt
 ```
-Add read permission from a user
+Add read permission for a user to read
 ```bash
 chmod u+r nameFile.txt
 ```
